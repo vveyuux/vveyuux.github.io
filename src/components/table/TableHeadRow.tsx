@@ -7,7 +7,7 @@ const TableHeadRow = ({ rowData }: TableRowPropInterface<HeadRowInterface>): Rea
             {rowData.map((head, index) => (
                 <th
                     key={index}
-                    className={`py-4 pr-8 text-sm font-semibold text-text dark:text-textDark ${head.hidden && "hidden"} ${
+                    className={`pl-4 py-4 pr-8 text-sm font-semibold text-text dark:text-textDark ${head.hidden && "hidden"} ${
                         head.sm && "sm:table-cell"
                     } ${head.md && "md:table-cell"} ${head.lg && "lg:table-cell"}`}
                 >

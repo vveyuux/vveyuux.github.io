@@ -5,10 +5,10 @@ import LinkIcon from "../icon/LinkIcon";
 const ProjectTableBodyRow: React.FC<RowProps<ProjectTableBodyRowPropInterface>> = ({ rowData }) => {
     return (
         <tr className="border-b border-primary/25 dark:border-primaryDark/25 last:border-none">
-            <td className="py-4 pr-4 align-top text-sm text-text dark:text-slate-300">
+            <td className="pl-4 py-4 pr-4 align-top text-sm text-text dark:text-slate-300">
                 <div className="translate-y-px">{rowData.year}</div>
             </td>
-            <td className="py-4 pr-4 align-top font-semibold leading-snug text-text dark:text-textDark">
+            <td className="pl-4 py-4 pr-4 align-top font-semibold leading-snug text-text dark:text-textDark">
                 <div>
                     <div className="block sm:hidden">
                         <a
@@ -30,10 +30,10 @@ const ProjectTableBodyRow: React.FC<RowProps<ProjectTableBodyRowPropInterface>> 
                     <div className="hidden sm:block">{`${rowData.projectName} ${rowData.projectSubName}`}</div>
                 </div>
             </td>
-            {/* <td className="hidden py-4 pr-4 align-top text-sm lg:table-cell">
+            {/* <td className="hidden pl-4 py-4 pr-4 align-top text-sm lg:table-cell">
                 <div className="translate-y-px whitespace-nowrap">Upstatement</div>
             </td> */}
-            <td className="hidden py-4 pr-4 align-top lg:table-cell">
+            <td className="hidden pl-4 py-4 pr-4 align-top lg:table-cell">
                 <ul className="flex -translate-y-1.5 flex-wrap">
                     {rowData.builtWith.map((tech, index) => <li key={index} className="my-1 mr-1.5">
                         <div className="flex items-center rounded-full bg-accent/50 dark:bg-accentDark/50 px-3 py-1 text-xs font-medium leading-5 text-accentDark dark:text-textDark ">
@@ -42,7 +42,7 @@ const ProjectTableBodyRow: React.FC<RowProps<ProjectTableBodyRowPropInterface>> 
                     </li>) }
                 </ul>
             </td>
-            <td className="hidden py-4 align-top sm:table-cell">
+            <td className="hidden pl-4 py-4 align-top sm:table-cell">
                 <ul className="translate-y-1">
                     <li className="mb-1 flex items-center">
                         <a

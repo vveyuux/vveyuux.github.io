@@ -16,8 +16,8 @@ export const PROJECTPAGE_PATH = `/project`;
 export const RESUME_PATH = `/resume.pdf`;
 
 export const fullname = "Veerayuth Bussararungsee";
-export const position = "A Recent Software Engineering Graduate";
-export const status = "Seeking for a software engineer position.";
+export const position = "A Software Developer";
+export const status = "I love building minimalistic front-end designs that emphasize simplicity, clarity, and functionality.";
 
 export const infoData: InfoPropsInterface = {
     fullname: fullname,
@@ -46,8 +46,17 @@ export const socialMediaLinks: SocialMediaInterface[] = [
 
 export const experiences: ExperienceInterface[] = [
     {
+        title: "Software Developer",
+        companyName: "Sirisoft Public Company Limited",
+        description: "Lorem ipsum odor amet, consectetuer adipiscing elit. Pellentesque risus quisque ante facilisis tempus facilisis. Aliquet imperdiet per suspendisse suspendisse aliquet aliquam lacinia vitae. Donec velit tempus sagittis augue volutpat tellus.",
+        href: "https://www.sirisoft.co.th/",
+        startDate: "Sep 2024",
+        endDate: "Present",
+        techStacks: [],
+    },
+    {
         title: "Student Internship",
-        companyName: "SCB TechX",
+        companyName: "SCB Tech X Company Limited",
         description:
             "During my internship, I developed two web applications, a Clocking Web Application and an Overtime Web Application. The Clocking Web Application, helps employees easily record their work hours and allows managers to track and monitor this information. The Overtime Web Application, enables employees to request approval for overtime work, ensuring management can approve and verify these requests.",
         href: "https://scbtechx.io/th/home/",

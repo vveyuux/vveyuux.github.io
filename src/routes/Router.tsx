@@ -5,7 +5,7 @@ import { HOMEPAGE_PATH, PROJECTPAGE_PATH } from "../constants/constants";
 import HomePage from "../pages/HomePage";
 import Preloader from "../components/loading/Preloader";
 import ProjectPage from "../pages/ProjectPage";
-import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import ThemeToggleButton from "../components/button/ThemeToggleButton";
 
 const Router: React.FC = () => {
@@ -23,34 +23,14 @@ const PageRoutes: React.FC = () => {
         <Suspense fallback={<Loading />}>
             <Preloader>
                 <ThemeToggleButton />
-                <Routes location={location} key={location.pathname}>
-                    <Route
-                        path={HOMEPAGE_PATH}
-                        element={
-                            <PageWrapper keyName={HOMEPAGE_PATH}>
-                                <HomePage />
-                            </PageWrapper>
-                        }
-                    />
-                    <Route
-                        path={PROJECTPAGE_PATH}
-                        element={
-                            <PageWrapper keyName={PROJECTPAGE_PATH}>
-                                <ProjectPage />
-                            </PageWrapper>
-                        }
-                    />
-                </Routes>
+                <AnimatePresence mode="wait">
+                    <Routes location={location} key={location.pathname}>
+                        <Route path={HOMEPAGE_PATH} element={<HomePage />} />
+                        <Route path={PROJECTPAGE_PATH} element={<ProjectPage />} />
+                    </Routes>
+                </AnimatePresence>
             </Preloader>
         </Suspense>
-    );
-};
-
-const PageWrapper: React.FC<{ children: React.ReactNode, keyName: string }> = ({ children, keyName }) => {
-    return (
-            <motion.div key={keyName} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5}}>
-                {children}
-            </motion.div>
     );
 };
 

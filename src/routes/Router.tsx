@@ -5,7 +5,7 @@ import { HOMEPAGE_PATH, PROJECTPAGE_PATH } from "../constants/constants";
 import HomePage from "../pages/HomePage";
 import Preloader from "../components/loading/Preloader";
 import ProjectPage from "../pages/ProjectPage";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import ThemeToggleButton from "../components/button/ThemeToggleButton";
 
 const Router: React.FC = () => {
@@ -27,7 +27,7 @@ const PageRoutes: React.FC = () => {
                     <Route
                         path={HOMEPAGE_PATH}
                         element={
-                            <PageWrapper>
+                            <PageWrapper keyName={HOMEPAGE_PATH}>
                                 <HomePage />
                             </PageWrapper>
                         }
@@ -35,7 +35,7 @@ const PageRoutes: React.FC = () => {
                     <Route
                         path={PROJECTPAGE_PATH}
                         element={
-                            <PageWrapper>
+                            <PageWrapper keyName={PROJECTPAGE_PATH}>
                                 <ProjectPage />
                             </PageWrapper>
                         }
@@ -46,13 +46,11 @@ const PageRoutes: React.FC = () => {
     );
 };
 
-const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const PageWrapper: React.FC<{ children: React.ReactNode, keyName: string }> = ({ children, keyName }) => {
     return (
-        <AnimatePresence mode="wait">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
+            <motion.div key={keyName} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5}}>
                 {children}
             </motion.div>
-        </AnimatePresence>
     );
 };
 

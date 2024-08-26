@@ -47,7 +47,13 @@ body {
     width: 8rem;
     height: 8rem;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    transform: scale(1);
     animation: profile_animate 8s ease-in-out infinite 1s;
+    transition: all 0.25s ease-in-out ;
+}
+
+.info-img:hover {
+    transform: scale(1.1);
 }
 
 /* Active state styles */

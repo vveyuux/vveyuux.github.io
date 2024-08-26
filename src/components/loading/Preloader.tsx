@@ -48,7 +48,7 @@ const Preloader: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <img className="rounded-full h-20 w-20 bg-transparent" src={coffeeGif} alt="coffee-loading" />
+                    <img loading="lazy" className="rounded-full h-20 w-20 bg-transparent" src={coffeeGif} alt="coffee-loading" />
                     <div className="w-64 bg-gray-200 rounded-lg">
                         <motion.div
                             className="bg-primary dark:bg-primaryDark h-2 rounded-lg"

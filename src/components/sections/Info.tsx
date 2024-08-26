@@ -9,7 +9,7 @@ const Info: React.FC<InfoPropsInterface> = ({ fullname, position, status }) => {
     return (
         <>
             <div className="lg:mb-6 group relative grid lg:place-items-center gap-4 sm:grid-cols-8 sm:gap-8 md:gap-4">
-                <img className="sm:order-1 sm:col-span-2 sm:translate-y-1 info-img hidden xl:block" src={myPic} alt="me" />
+                <img loading="lazy" className="sm:order-1 sm:col-span-2 sm:translate-y-1 info-img hidden xl:block" src={myPic} alt="me" />
                 <h1 className="sm:order-2 sm:col-span-6 text-4xl font-bold tracking-tight text-text dark:text-textDark xl:text-3xl">
                     {fullname ? fullname : "Full Name Here"}
                 </h1>

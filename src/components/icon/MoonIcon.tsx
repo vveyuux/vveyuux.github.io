@@ -1,4 +1,4 @@
-const MonnIcon = () => {
+const MoonIcon = () => {
     return (
         <svg className="h-8 w-8 lg:h-10 lg:w-10 fill-current text-[#f3f2f2]" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
             <path
@@ -17,4 +17,4 @@ const MonnIcon = () => {
     );
 };
 
-export default MonnIcon;
+export default MoonIcon;

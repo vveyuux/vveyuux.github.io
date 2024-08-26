@@ -3,7 +3,7 @@ import SunIcon from "../icon/SunIcon";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme } from "../redux/slices/themeSlice";
 import { AppDispatch, RootState } from "../redux/store";
-import MonnIcon from "../icon/MonnIcon";
+import MoonIcon from "../icon/MoonIcon";
 import { AnimatePresence, motion } from "framer-motion";
 
 const ThemeToggleButton: React.FC = () => {
@@ -31,7 +31,7 @@ const ThemeToggleButton: React.FC = () => {
                             transition={{ duration: 0.5 }}
                             className="absolute top-0 left-0"
                         >
-                            <MonnIcon />
+                            <MoonIcon />
                         </motion.div>
                     ) : (
                         <motion.div

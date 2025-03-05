@@ -48,11 +48,16 @@ export const experiences: ExperienceInterface[] = [
     {
         title: "Software Developer",
         companyName: "Sirisoft Public Company Limited",
-        description: "Lorem ipsum odor amet, consectetuer adipiscing elit. Pellentesque risus quisque ante facilisis tempus facilisis. Aliquet imperdiet per suspendisse suspendisse aliquet aliquam lacinia vitae. Donec velit tempus sagittis augue volutpat tellus.",
+        description: "Developed and deployed client websites and mobile apps using AngularJS for web and Flutter for mobile. Ensured smooth performance across browsers and devices. Clients included the Rubber Authority of Thailand (RAOT).",
         href: "https://www.sirisoft.co.th/",
         startDate: "Sep 2024",
         endDate: "Present",
-        techStacks: [],
+        techStacks: [
+            "AngularJS",
+            "TypeScript",
+            "NestJS",
+            "Oracle"
+        ],
     },
     {
         title: "Student Internship",
@@ -63,9 +68,9 @@ export const experiences: ExperienceInterface[] = [
         startDate: "Jun 2023",
         endDate: "Jan 2024",
         techStacks: [
-            "React.js",
+            "ReactJS",
             "TypeScript",
-            "Express.js",
+            "ExpressJS",
             "Ruby on Rails",
             "PostgreSQL",
             "Docker",
@@ -105,7 +110,7 @@ export const projects: ProjectInterface[] = [
         href: "https://github.com/rynlapat/electric-bill-calculator",
         imgPath: electricBillCalculatorPic,
         imgAlt: "Electric Bill Calculator Web Page",
-        techStacks: ["TypeScript", "React.js", "Next.js"],
+        techStacks: ["TypeScript", "ReactJS", "NextJS"],
     },
 ];
 
@@ -133,7 +138,7 @@ export const allProjectData: ProjectTableBodyRowPropInterface[] = [
         year: "2024",
         projectName: "Electric Bill ",
         projectSubName: "Calculator",
-        builtWith: ["TypeScript", "React.js", "Next.js"],
+        builtWith: ["TypeScript", "ReactJS", "NextJS"],
         titleLink: "electric-bill-calculator",
         href: "https://github.com/rynlapat/electric-bill-calculator",
     },
